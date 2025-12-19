@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAMURAI SHADOWS — Détails produit</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="demo-atelier">
+  <div class="container" style="padding:3rem 2rem">
+    <a href="/realisations/site-1.html">← Retour à la boutique</a>
+    <div style="display:flex;gap:2rem;align-items:flex-start;margin-top:1.2rem;flex-wrap:wrap">
+      <div style="flex:1;min-width:320px;max-width:520px">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=aa1" alt="SAMURAI SHADOWS" style="width:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,208,255,0.06)">
+      </div>
+      <div style="flex:1;min-width:260px">
+        <h1 style="font-family:'Press Start 2P',sans-serif;color:var(--gold)">SAMURAI SHADOWS (Retro RPG)</h1>
+        <p class="price">€39</p>
+        <p style="color:var(--muted)">Un RPG rétro à l'esthétique japonaise sombre, combats tactiques et histoire épique.</p>
+        <div style="margin-top:1rem"><button class="btn primary add-btn" data-id="g2">Ajouter au panier</button> <button class="btn outline view-btn" data-id="g2">Agrandir</button></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.add-btn').forEach(b=>b.addEventListener('click', ()=>{
+      const id = b.dataset.id; const c = JSON.parse(localStorage.getItem('agelou_cart')||'[]'); const it = c.find(x=>x.id===id); if(it) it.qty++; else c.push({id,qty:1}); localStorage.setItem('agelou_cart', JSON.stringify(c)); alert('Ajouté au panier');
+    }));
+  </script>
+</body>
+</html>

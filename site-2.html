@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Évasion Voyages — Votre agence de voyage sur mesure</title>
+  <meta name="description" content="Évasion Voyages — Agence de voyage spécialisée dans les séjours sur mesure, circuits découverte et escapades d'exception." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="../assets/rhino-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/rhino-logo.svg">
+</head>
+<body class="demo-with-banner demo-travel">
+  <div class="demo-banner">DÉMO — Évasion Voyages</div>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <a href="/" style="display:flex;gap:.6rem;align-items:center;text-decoration:none;color:var(--text);font-weight:700"><img src="../assets/rhino-logo.svg" alt="Évasion Voyages" class="travel-logo rhino-bounce">← Retour</a>
+      <nav style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#home">Accueil</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#services">Services</a>
+        <a href="#temoignages">Témoignages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-travel" style="padding:4rem 0;position:relative;overflow:hidden">
+      <div class="hero-images" style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:2rem;border-radius:12px;overflow:hidden;max-height:240px">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" alt="Lac montagne" style="width:100%;height:240px;object-fit:cover">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Plage tropicale" style="width:100%;height:240px;object-fit:cover">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Montagnes" style="width:100%;height:240px;object-fit:cover">
+      </div>
+      <div class="container">
+        <h1 style="font-size:2.8rem;margin:0;color:#2c5f2d">✈️ Évasion Voyages</h1>
+        <p style="color:#5a7c5a;font-size:1.2rem;max-width:75%;margin-top:.8rem;line-height:1.6">🌍 Partez à l'aventure avec nous ! Circuits sur-mesure, séjours d'exception et escapades authentiques aux quatre coins du monde.</p>
+        <div style="margin-top:1.8rem;display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn primary" href="#destinations">🗺️ Découvrir nos destinations</a>
+          <a class="btn outline" href="#contact">📧 Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations" class="container section">
+      <h2 style="color:#2c5f2d;font-size:2.2rem;font-weight:700;margin-bottom:1rem">🌍 Destinations phares</h2>
+      <p style="color:#5a7c5a;max-width:75%;margin-bottom:1.5rem;font-size:1.05rem">Explorez nos destinations favorites, choisies pour leur beauté, leur richesse culturelle et leurs expériences uniques.</p>
+      <div class="grid" id="destGrid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem"></div>
+    </section>
+
+    <section id="services" class="container section">
+      <h2 style="color:#2c5f2d;font-size:2.2rem;font-weight:700;margin-bottom:1.5rem">✨ Nos services</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem">
+        <div class="card service-card">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">🎨</div>
+          <h3>Séjours sur mesure</h3>
+          <p>Conception de voyages personnalisés selon vos envies et votre budget. Chaque détail compte !</p>
+        </div>
+        <div class="card service-card">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">🚌</div>
+          <h3>Circuits organisés</h3>
+          <p>Circuits en groupe avec guides francophones passionnés et hébergements de qualité.</p>
+        </div>
+        <div class="card service-card">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">⚡</div>
+          <h3>Escapades week-end</h3>
+          <p>Courtes escapades en Europe pour des moments de détente express. Parfait pour se ressourcer !</p>
+        </div>
+        <div class="card service-card">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">💍</div>
+          <h3>Voyages de noces</h3>
+          <p>Lune de miel inoubliable avec attention aux détails et moments romantiques. C'est votre moment !</p>
+        </div>
+        <div class="card service-card">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">👨‍👩‍👧‍👦</div>
+          <h3>Voyages en famille</h3>
+          <p>Des aventures adaptées aux petits et grands avec activités ludiques pour tous les âges.</p>
+        </div>
+        <div class="card service-card">
+          <div style="font-size:2.5rem;margin-bottom:.5rem">🎒</div>
+          <h3>Backpacking</h3>
+          <p>Pour les aventuriers : itinéraires flexibles et expériences authentiques à petit prix.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="temoignages" class="container section">
+      <h2 style="color:#2c5f2d;font-size:2.2rem;font-weight:700;margin-bottom:1.5rem">💬 Ce que nos clients disent de nous</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
+        <div class="card testimonial-card">
+          <div style="font-size:2rem;margin-bottom:.5rem">⭐⭐⭐⭐⭐</div>
+          <p>"Un voyage exceptionnel au Japon organisé de A à Z. Évasion Voyages a su capter nos envies et nous faire vivre une expérience unique. Les temples, la nourriture, tout était magique !"</p>
+          <strong>— Marie & Thomas, Tokyo 2024</strong>
+        </div>
+        <div class="card testimonial-card">
+          <div style="font-size:2rem;margin-bottom:.5rem">⭐⭐⭐⭐⭐</div>
+          <p>"Service impeccable et accompagnement sur-mesure pour notre lune de miel aux Maldives. Tout était parfait, du vol aux activités nautiques. Un rêve devenu réalité !"</p>
+          <strong>— Sophie & Julien, Maldives 2024</strong>
+        </div>
+        <div class="card testimonial-card">
+          <div style="font-size:2rem;margin-bottom:.5rem">⭐⭐⭐⭐⭐</div>
+          <p>"Circuit culturel en Italie magnifiquement orchestré. Les guides étaient passionnants et les hébergements parfaits. Merci pour cette découverte inoubliable !"</p>
+          <strong>— Laurent D., Toscane 2023</strong>
+        </div>
+        <div class="card testimonial-card">
+          <div style="font-size:2rem;margin-bottom:.5rem">⭐⭐⭐⭐⭐</div>
+          <p>"Notre trek en Islande était spectaculaire ! L'équipe d'Évasion Voyages a pensé à tout. Les aurores boréales resteront gravées dans nos mémoires."</p>
+          <strong>— Claire & Marc, Reykjavik 2024</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2 style="color:#2c5f2d;font-size:2.2rem;font-weight:700;margin-bottom:1rem">📬 Demander un devis gratuit</h2>
+      <p style="color:#5a7c5a;max-width:75%;margin-bottom:1.5rem;font-size:1.05rem">✨ Décrivez-nous votre projet de voyage et nous vous contacterons sous 48h avec une proposition sur mesure. Votre aventure commence ici ! 🌍</p>
+      <form id="demoForm2" class="contact-form" action="#" novalidate>
+        <div class="form-row">
+          <input type="text" id="d2-name" name="name" placeholder="Nom et prénom" required>
+          <input type="email" id="d2-email" name="email" placeholder="Email" required>
+        </div>
+        <input type="tel" id="d2-phone" name="phone" placeholder="Téléphone (optionnel)">
+        <textarea id="d2-message" name="message" rows="5" placeholder="Décrivez votre projet : destination, durée, budget, nombre de voyageurs..." required></textarea>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Demander un devis</button>
+        </div>
+        <div id="d2-msg" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+      <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <div class="card" style="min-width:220px">
+          <strong>Téléphone</strong><br>+33 1 88 77 66 55
+        </div>
+        <div class="card" style="min-width:220px">
+          <strong>Email</strong><br><a href="mailto:contact@evasion-voyages.demo">contact@evasion-voyages.demo</a>
+        </div>
+        <div class="card" style="min-width:220px">
+          <strong>Agence</strong><br>12 Rue du Voyage, 75009 Paris
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Évasion Voyages — Démo Pack Pro</div>
+      <div style="color:var(--muted)">Licence IATA fictive — Données de démonstration</div>
+    </div>
+  </footer>
+
+  <script>
+    // Destinations data with landscape images
+    const destinations = [
+      { id:'d1', name:'🇯🇵 Japon', desc:'Temples zen, cerisiers en fleurs et technologie futuriste', img:'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=1200&auto=format&fit=crop', price:'À partir de €2 490' },
+      { id:'d2', name:'🏝️ Maldives', desc:'Plages paradisiaques, eaux cristallines et bungalows sur pilotis', img:'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop', price:'À partir de €1 890' },
+      { id:'d3', name:'🌋 Islande', desc:'Volcans actifs, glaciers millénaires et aurores boréales magiques', img:'https://images.unsplash.com/photo-1504893524553-b855bce32c67?q=80&w=1200&auto=format&fit=crop', price:'À partir de €1 590' },
+      { id:'d4', name:'🐪 Maroc', desc:'Déserts du Sahara, médinas colorées et thé à la menthe', img:'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=1200&auto=format&fit=crop', price:'À partir de €890' },
+      { id:'d5', name:'⛰️ Norvège', desc:'Fjords spectaculaires, villages de pêcheurs et nature sauvage', img:'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1200&auto=format&fit=crop', price:'À partir de €1 790' },
+      { id:'d6', name:'🌺 Bali', desc:'Temples hindous, rizières en terrasses et plages de rêve', img:'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format&fit=crop', price:'À partir de €1 390' },
+      { id:'d7', name:'🗽 New York', desc:'Skyline emblématique, Broadway et Central Park', img:'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=1200&auto=format&fit=crop', price:'À partir de €1 290' },
+      { id:'d8', name:'🦘 Australie', desc:'Grande Barrière de Corail, Outback et kangourous', img:'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?q=80&w=1200&auto=format&fit=crop', price:'À partir de €3 190' },
+      { id:'d9', name:'🏔️ Pérou', desc:'Machu Picchu, lamas adorables et culture inca', img:'https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=1200&auto=format&fit=crop', price:'À partir de €2 290' }
+    ];
+
+    const grid = document.getElementById('destGrid');
+    destinations.forEach(d=>{
+      const el = document.createElement('div');
+      el.className = 'destination-card card';
+      el.innerHTML = `
+        <img src="${d.img}" alt="${d.name}" style="width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:.8rem">
+        <h3>${d.name}</h3>
+        <p style="color:var(--muted);margin:.4rem 0">${d.desc}</p>
+        <div style="margin-top:.6rem;display:flex;justify-content:space-between;align-items:center">
+          <strong style="color:#2c5f2d">${d.price}</strong>
+          <a class="btn primary small" href="#contact">Devis</a>
+        </div>
+      `;
+      grid.appendChild(el);
+    });
+
+    // Form handling
+    document.getElementById('demoForm2').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const name = document.getElementById('d2-name').value.trim();
+      const email = document.getElementById('d2-email').value.trim();
+      const phone = document.getElementById('d2-phone').value.trim();
+      const message = document.getElementById('d2-message').value.trim();
+      const msgEl = document.getElementById('d2-msg');
+      if(!name||!email||!message){ msgEl.textContent='Merci de remplir tous les champs obligatoires.'; return; }
+      try{
+        const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ name, email, phone, message }) });
+        if(res.ok){ msgEl.textContent='Merci - votre demande de devis a ete envoyee. Nous vous contacterons sous 48h.'; this.reset(); } else { msgEl.textContent='Erreur lors de envoi.'; }
+      }catch(e){ msgEl.textContent='Erreur reseau'; }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('header nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FEUILLES QUI TOMBENT - Érable, feuille verte et feuille marron
+    function createLeaf() {
+      const leaf = document.createElement('div');
+      const leaves = ['🍁', '🍃', '🍂'];
+      leaf.innerHTML = leaves[Math.floor(Math.random() * leaves.length)];
+      leaf.style.cssText = `
+        position: fixed;
+        top: -100px;
+        left: ${Math.random() * 100}%;
+        font-size: ${Math.random() * 2 + 2}rem;
+        z-index: 9999;
+        pointer-events: none;
+      `;
+      leaf.className = 'falling-leaf';
+      document.body.appendChild(leaf);
+      
+      setTimeout(() => leaf.remove(), 10000);
+    }
+    
+    // Créer 3 feuilles au démarrage (encore moins qu'avant)
+    for(let i = 0; i < 3; i++) {
+      setTimeout(createLeaf, i * 800);
+    }
+    
+    // Continuer avec moins de fréquence (toutes les 4 secondes)
+    setInterval(createLeaf, 4000);
+    
+    // Oiseau SVG animé qui vole de droite à gauche
+    function flyBird() {
+      const bird = document.createElement('div');
+      const topPos = Math.random() * 40 + 15;
+      const duration = Math.random() * 3 + 10;
+      
+      // SVG d'oiseau avec ailes qui battent
+      bird.innerHTML = `
+        <svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="birdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#4a7c65;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#2c5f2d;stop-opacity:1"/>
+            </linearGradient>
+          </defs>
+          <!-- Corps -->
+          <ellipse cx="35" cy="20" rx="15" ry="8" fill="url(#birdGrad)"/>
+          <!-- Tête -->
+          <circle cx="50" cy="18" r="6" fill="url(#birdGrad)"/>
+          <!-- Bec -->
+          <path d="M 56,18 L 60,18 L 58,20 Z" fill="#ff8c00"/>
+          <!-- Oeil -->
+          <circle cx="52" cy="17" r="1.5" fill="#ffffff"/>
+          <circle cx="52.5" cy="17" r="0.8" fill="#000000"/>
+          <!-- Aile gauche avec animation -->
+          <path d="M 35,20 Q 20,10 10,15 Q 15,22 35,24 Z" fill="rgba(74,124,101,0.8)">
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              values="0,35,20; -25,35,20; 0,35,20"
+              dur="0.3s"
+              repeatCount="indefinite"/>
+          </path>
+          <!-- Aile droite avec animation -->
+          <path d="M 35,20 Q 50,10 60,15 Q 55,22 35,24 Z" fill="rgba(74,124,101,0.7)">
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              values="0,35,20; 25,35,20; 0,35,20"
+              dur="0.3s"
+              repeatCount="indefinite"/>
+          </path>
+          <!-- Queue -->
+          <path d="M 20,20 Q 15,18 12,20 Q 15,22 20,22 Z" fill="rgba(44,95,45,0.8)"/>
+        </svg>
+      `;
+      
+      bird.style.cssText = `position:fixed;left:-150px;top:${topPos}%;z-index:9999;pointer-events:none;filter:drop-shadow(0 4px 12px rgba(44,95,45,0.3))`;
+      document.body.appendChild(bird);
+      
+      // Animation de gauche à droite avec mouvement ondulant
+      const startTime = Date.now();
+      const animate = () => {
+        const elapsed = (Date.now() - startTime) / 1000;
+        if (elapsed < duration) {
+          const progress = elapsed / duration;
+          const xPos = -150 + (progress * (window.innerWidth + 300));
+          const yOffset = Math.sin(progress * Math.PI * 4) * 40;
+          const rotation = Math.sin(progress * Math.PI * 4) * 8;
+          bird.style.transform = `translate(${xPos + 150}px, ${yOffset}px) rotate(${rotation}deg)`;
+          requestAnimationFrame(animate);
+        } else {
+          bird.remove();
+        }
+      };
+      
+      requestAnimationFrame(animate);
+    }
+    
+    // Premier oiseau après 10 secondes, puis toutes les 30 secondes
+    setTimeout(flyBird, 10000);
+    setInterval(flyBird, 30000);
+  </script>
+</body>
+</html>

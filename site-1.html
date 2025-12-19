@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boutique Jeux Vidéo — Zone rétro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/assets/alien-sprite-demo.svg">
+</head>
+<body class="demo-with-banner demo-atelier">
+  <div class="demo-banner">DÉMO — Boutique Jeux Vidéo</div>
+  <header style="background:transparent;padding:1rem 0">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <a href="/" style="display:flex;gap:.75rem;align-items:center;text-decoration:none;color:var(--text)"><img src="/assets/alien-sprite-demo.svg" alt="Logo — petit alien" class="brand-logo brand-alien">Retour</a>
+      <nav class="pixel-nav">
+        <a class="pixel-link" href="#home">Home</a>
+        <a class="pixel-link" href="#services">Services</a>
+        <a class="pixel-link" href="#portfolio">Portfolio</a>
+        <a class="pixel-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" style="padding:2rem 0;">
+      <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+        <div>
+          <h1 style="margin:0;font-family:'Press Start 2P',sans-serif;color:var(--gold)">Zone rétro — Boutique Jeux Vidéo <span style="font-family:'Noto Sans JP',sans-serif;display:block;font-size:0.8rem;margin-top:.4rem;color:var(--muted)">レトロ・ネオン ゲームショップ</span></h1>
+          <p style="color:var(--muted);max-width:60%">Une boutique rétro japonaise, noire et néon — jeux, accessoires et éditions collector.</p>
+        </div>
+        <div class="cart-toggle">
+          <button id="openCart" class="btn outline"><img src="/assets/pixel-cart.svg" alt="Panier" class="pixel-cart"> Panier</button>
+          <div class="cart-count" id="cartCount">0</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container section">
+      <h2>Produits</h2>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section id="services" class="container section">
+      <h2>Services — Livraison & Montage</h2>
+      <p style="color:var(--muted);max-width:70%">Nous proposons des services à domicile pour la fabrication, l'installation et la mise en place d'un setup gamer (prix du PC non inclus).</p>
+      <div class="service-grid" id="servicesGrid" style="margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem"></div>
+    </section>
+
+      <!-- Product preview modal -->
+      <div id="productModal" class="product-modal" aria-hidden="true">
+        <div class="modal-inner">
+          <button id="modalClose" class="btn outline small" style="position:absolute;top:12px;right:12px">Fermer</button>
+          <div id="modalContent"></div>
+        </div>
+      </div>
+
+    <section id="checkout" class="container section">
+      <h2>Paiement (simulé)</h2>
+      <p class="checkout-note">Le paiement est simulé : le formulaire envoie une commande à l'API et vide le panier.</p>
+      <form id="checkoutForm" class="contact-form" action="#" novalidate>
+        <div class="form-row">
+          <input type="text" id="c-name" name="name" placeholder="Nom" required>
+          <input type="email" id="c-email" name="email" placeholder="Email" required>
+        </div>
+        <textarea id="c-address" name="address" rows="4" placeholder="Adresse de livraison" required></textarea>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Valider la commande</button>
+        </div>
+        <div id="checkoutMsg" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <section id="contact" class="container section contact-section" tabindex="-1">
+  <h2>Contact — Zone rétro</h2>
+    <p style="color:var(--muted);max-width:70%">Pour commandes, démonstrations et renseignements (fictifs) :</p>
+    <div class="contact-grid" style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem">
+      <div class="card contact-card" style="flex:1;min-width:220px">
+        <h3>Adresse</h3>
+        <p>123 Rue Nekopop, 75001 Paris, France</p>
+        <p><small>Horaires : Lun–Ven 9h–18h</small></p>
+      </div>
+      <div class="card contact-card" style="flex:1;min-width:220px">
+        <h3>Téléphone</h3>
+        <p>+33 1 23 45 67 89</p>
+        <h3>Email</h3>
+        <p><a href="mailto:contact@agelou.demo">contact@agelou.demo</a></p>
+      </div>
+      <div class="card contact-card" style="flex:1;min-width:220px">
+        <h3>Réseaux</h3>
+        <p>@agelou_demo — Twitter / Instagram (fictifs)</p>
+        <p>Siège : Zone rétro — Paris</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <h3>Votre panier</h3>
+    <div id="cartItems"></div>
+    <div style="margin-top:1rem;display:flex;justify-content:space-between;align-items:center">
+      <div style="font-weight:700">Total : <span id="cartTotal">€0</span></div>
+      <div>
+        <button id="clearCart" class="btn outline small">Vider</button>
+        <button id="toCheckout" class="btn primary small">Commander</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Agelou Studio — Zone rétro</div>
+      <div class="socials">—</div>
+    </div>
+  </footer>
+
+  <script>
+    // Sample products (jeux vidéo)
+    const products = [
+      { id: 'g1', title: 'NEON RACER — Éd. Deluxe', price: 59, img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=cc3' },
+      { id: 'g2', title: 'SAMURAI SHADOWS (Retro RPG)', price: 39, img: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=aa1' },
+      { id: 'g3', title: 'PIXEL QUEST — Collector', price: 79, img: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=bb2' }
+    ];
+
+    // Services (livraison & montage) — prix hors PC
+    const services = [
+      { id: 's1', title: 'Fabrication & Installation PC Gamer', price: 200, note: 'Montage et réglages (prix du PC non inclus)', icon: '/assets/service-s1.svg' },
+      { id: 's2', title: 'Install + Table & Kit clavier/souris', price: 500, note: 'Installation PC + table gamer + kit clavier/souris (prix du PC non inclus)', icon: '/assets/service-s2.svg' },
+      { id: 's3', title: 'Pack Premium: PC + Kit + Table + Chaise + Ambiance', price: 1000, note: 'Fabrication et installation PC, kit clavier/souris, table et chaise, mise en place ambiance néon (prix du PC non inclus)', icon: '/assets/service-s3.svg' }
+    ];
+
+    function formatPrice(n){ return '€'+n }
+
+    // Render products
+    const grid = document.getElementById('productGrid');
+    products.forEach(p=>{
+      const el = document.createElement('div'); el.className='product-card card';
+      el.innerHTML = `<img src="${p.img}" alt="${p.title}"><h3>${p.title}</h3><div style="display:flex;align-items:center;gap:.6rem"><img src="/assets/sprite-${p.id}.svg" alt="" style="width:48px;height:48px;image-rendering:pixelated;border-radius:6px"> <div class="price">${formatPrice(p.price)}</div></div><div style="margin-top:.6rem"><button class="btn primary add-btn" data-id="${p.id}">Ajouter au panier</button> <button class="btn outline view-btn" data-id="${p.id}">Voir</button></div>`;
+      grid.appendChild(el);
+    });
+
+    // Render services
+    const sgrid = document.getElementById('servicesGrid');
+    services.forEach(s=>{
+      const el = document.createElement('div'); el.className='service-card card';
+      el.innerHTML = `
+        <div class="service-top">
+          <div class="service-image"><img src="${s.icon}" alt="${s.title}"></div>
+          <div class="service-body">
+            <h3>${s.title}</h3>
+            <p class="service-note">${s.note}</p>
+            <div class="service-price">${formatPrice(s.price)} <span class="muted">(hors PC)</span></div>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn primary add-btn" data-id="${s.id}">Ajouter au panier</button>
+          <button class="btn outline" data-service="${s.id}">Commander</button>
+        </div>`;
+      sgrid.appendChild(el);
+    });
+
+    // Cart logic (localStorage)
+    function saveCart(c){ localStorage.setItem('agelou_cart', JSON.stringify(c)); }
+    function loadCart(){ return JSON.parse(localStorage.getItem('agelou_cart')||'[]'); }
+
+    function updateCartCount(){ const c = loadCart(); const count = c.reduce((s,i)=>s+i.qty,0); document.getElementById('cartCount').textContent = count; }
+
+    function renderCart(){ const c = loadCart(); const container = document.getElementById('cartItems'); container.innerHTML=''; let total=0;
+      c.forEach(it=>{ const prod = [...products,...services].find(p=>p.id===it.id); total += (prod.price||0)*it.qty; const priceText = prod.price ? formatPrice(prod.price) : '—'; const imgTag = prod.img ? `<img src="${prod.img}">` : `<img src="/assets/pixel-cart.svg">`; const div = document.createElement('div'); div.className='cart-item'; div.innerHTML = `${imgTag}<div style="flex:1"><div style="font-weight:700;color:#fff">${prod.title}</div><div>${priceText}</div></div><div class="qty"><button class="btn outline small dec" data-id="${it.id}">-</button><div style="min-width:28px;text-align:center">${it.qty}</div><button class="btn outline small inc" data-id="${it.id}">+</button></div>`; container.appendChild(div);});
+      document.getElementById('cartTotal').textContent = formatPrice(total);
+      // attach events
+      container.querySelectorAll('.inc').forEach(b=>b.addEventListener('click',()=>{ changeQty(b.dataset.id,1); }));
+      container.querySelectorAll('.dec').forEach(b=>b.addEventListener('click',()=>{ changeQty(b.dataset.id,-1); }));
+    }
+
+    function changeQty(id, delta){ const c = loadCart(); const it = c.find(x=>x.id===id); if(!it) return; const newQty = Math.max(0, it.qty+delta); if(newQty===0){
+        // find cart item element to position explosion
+        const button = document.querySelector(`.dec[data-id="${id}"]`);
+        let rect=null; if(button){ const row = button.closest('.cart-item'); if(row) rect = row.getBoundingClientRect(); }
+        const centerX = rect ? (rect.left + rect.right)/2 : (window.innerWidth/2);
+        const centerY = rect ? (rect.top + rect.bottom)/2 : (window.innerHeight/2);
+        createExplosionAt(centerX, centerY); playExplosionSound();
+      }
+      it.qty = newQty; const newc = c.filter(x=>x.qty>0); saveCart(newc); renderCart(); updateCartCount(); }
+    
+    // Explosion effect when item removed
+    function createExplosionAt(x,y){
+      if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const el = document.createElement('div'); el.className = 'alien-explosion';
+      el.style.left = x + 'px'; el.style.top = y + 'px';
+      document.body.appendChild(el);
+      setTimeout(()=>{ if(el && el.parentNode) el.parentNode.removeChild(el); }, 700);
+    }
+
+    function playExplosionSound(){
+      try{
+        if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const o = ctx.createOscillator(); const g = ctx.createGain();
+        o.type = 'square'; o.frequency.setValueAtTime(700, ctx.currentTime);
+        g.gain.setValueAtTime(0.0001, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.008);
+        g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.22);
+        o.connect(g); g.connect(ctx.destination);
+        o.start(); o.frequency.exponentialRampToValueAtTime(180, ctx.currentTime + 0.18);
+        setTimeout(()=>{ o.stop(); try{ ctx.close(); }catch(e){} }, 280);
+      }catch(e){ console.warn('explosion sound failed', e); }
+    }
+
+    function addToCart(id){ const c = loadCart(); const it = c.find(x=>x.id===id); if(it) it.qty+=1; else c.push({ id, qty:1}); saveCart(c); renderCart(); updateCartCount(); }
+
+    // small visual feedback: shake cart icon
+    const cartToggle = document.querySelector('.cart-toggle');
+    const triggerShake = ()=>{ cartToggle.classList.add('shake'); setTimeout(()=>cartToggle.classList.remove('shake'),700); }
+
+    // Fly-animal (alien) animation: spawn an alien that flies from source to cart
+    function flyAlienFromElement(sourceEl){
+      const cartBtn = document.getElementById('openCart');
+      if(!sourceEl || !cartBtn) return;
+      const srcRect = sourceEl.getBoundingClientRect();
+      const cartRect = cartBtn.getBoundingClientRect();
+      const startX = srcRect.left + srcRect.width/2;
+      const startY = srcRect.top + srcRect.height/2;
+      const targetX = cartRect.left + cartRect.width/2;
+      const targetY = cartRect.top + cartRect.height/2;
+      const img = document.createElement('img'); img.src = '/assets/alien-sprite-demo.svg'; img.className = 'flying-alien';
+      document.body.appendChild(img);
+      // place at start
+      img.style.left = (startX - 24) + 'px'; img.style.top = (startY - 24) + 'px';
+      // force repaint
+      void img.offsetWidth;
+      const dx = targetX - startX; const dy = targetY - startY;
+      img.style.transform = `translate(${dx}px, ${dy}px) scale(0.45)`;
+      img.style.opacity = '0.12';
+      // after most of the travel, create flash and sound, then remove
+      const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const arrivalDelay = reduced ? 500 : 1200;
+      setTimeout(()=>{
+        // flash at cart
+        createCartFlash(targetX, targetY);
+        playPickupSound();
+      }, arrivalDelay);
+      setTimeout(()=>{ if(img && img.parentNode) img.parentNode.removeChild(img); }, arrivalDelay + 600);
+    }
+
+    // Smooth scroll to contact when clicking the pixel nav contact link
+    document.querySelectorAll('.pixel-link[href="#contact"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.getElementById('contact');
+        if(!target) return location.hash = '#contact';
+        target.scrollIntoView({behavior:'smooth', block:'end'});
+        // focus for accessibility
+        target.focus({preventScroll:true});
+      });
+    });
+
+    function createCartFlash(x, y){
+      if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const el = document.createElement('div'); el.className='cart-flash';
+      el.style.left = x + 'px'; el.style.top = y + 'px';
+      document.body.appendChild(el);
+      setTimeout(()=>{ if(el && el.parentNode) el.parentNode.removeChild(el); }, 600);
+    }
+
+    function playPickupSound(){
+      try{
+        if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const o = ctx.createOscillator(); const g = ctx.createGain();
+        o.type = 'sine'; o.frequency.setValueAtTime(600, ctx.currentTime);
+        g.gain.setValueAtTime(0.0001, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.12, ctx.currentTime + 0.01);
+        g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.28);
+        o.connect(g); g.connect(ctx.destination);
+        o.start();
+        o.frequency.exponentialRampToValueAtTime(220, ctx.currentTime + 0.26);
+        setTimeout(()=>{ o.stop(); try{ ctx.close(); }catch(e){} }, 350);
+      }catch(e){ console.warn('sound failed', e); }
+    }
+
+    // apply shake and fly animation when add buttons clicked
+    document.addEventListener('click', (e)=>{
+      if(e.target && e.target.classList && e.target.classList.contains('add-btn')){
+        triggerShake();
+        // find product/service image to start from
+        let src = e.target.closest('.product-card');
+        if(src){ src = src.querySelector('img'); }
+        else { src = e.target.closest('.service-card'); if(src) src = src.querySelector('.service-image img'); }
+        if(!src) src = e.target;
+        flyAlienFromElement(src);
+      }
+    });
+
+    // events
+    document.querySelectorAll('.add-btn').forEach(b=>b.addEventListener('click', ()=> addToCart(b.dataset.id)));
+    document.querySelectorAll('.view-btn').forEach(b=>b.addEventListener('click', ()=>{
+      const id = b.dataset.id; const p = products.find(x=>x.id===id); if(p){
+        const modal = document.getElementById('productModal'); const modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `<img src="${p.img}" alt="${p.title}"><h3>${p.title}</h3><p style="color:var(--muted)">Prix: ${formatPrice(p.price)}</p><div style="margin-top:8px"><button class=\"btn primary add-btn\" data-id=\"${p.id}\">Ajouter au panier</button> <a class=\"btn outline\" href=\"/realisations/product-${p.id}.html\">Fiche produit</a></div>`;
+        modal.setAttribute('aria-hidden','false');
+        // rebind add button inside modal
+        modalContent.querySelector('.add-btn').addEventListener('click', ()=>{ addToCart(p.id); alert('Ajouté au panier'); modal.setAttribute('aria-hidden','true'); });
+      }
+    }));
+    document.getElementById('modalClose').addEventListener('click', ()=>{ document.getElementById('productModal').setAttribute('aria-hidden','true'); });
+    // close modal on background click or ESC
+    document.getElementById('productModal').addEventListener('click', (e)=>{ if(e.target.id==='productModal') e.currentTarget.setAttribute('aria-hidden','true'); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') document.getElementById('productModal').setAttribute('aria-hidden','true'); });
+    document.getElementById('openCart').addEventListener('click', ()=>{
+      const d = document.getElementById('cartDrawer'); d.classList.toggle('open'); d.setAttribute('aria-hidden', d.classList.contains('open')? 'false':'true');
+    });
+
+    document.getElementById('clearCart').addEventListener('click', ()=>{ const c = loadCart(); // create explosions for each item
+      c.forEach(it=>{ const dec = document.querySelector(`.dec[data-id="${it.id}"]`); let cx = window.innerWidth/2, cy = window.innerHeight/2; if(dec){ const r = dec.closest('.cart-item'); if(r){ const rect = r.getBoundingClientRect(); cx = (rect.left+rect.right)/2; cy = (rect.top+rect.bottom)/2; } } createExplosionAt(cx,cy); }); playExplosionSound(); saveCart([]); renderCart(); updateCartCount(); });
+    document.getElementById('toCheckout').addEventListener('click', ()=>{ document.getElementById('checkout').scrollIntoView({behavior:'smooth'}); document.getElementById('cartDrawer').classList.remove('open'); });
+
+    // quick 'Commander' handler for services buttons — prefill checkout note and scroll
+    document.querySelectorAll('[data-service]').forEach(b=>b.addEventListener('click', (e)=>{
+      const sId = e.currentTarget.getAttribute('data-service'); const s = services.find(x=>x.id===sId);
+      if(!s) return; // fill checkout form message and scroll
+      const msg = document.getElementById('checkoutMsg'); msg.textContent = `Service sélectionné: ${s.title} — ${formatPrice(s.price)} (hors PC)`;
+      document.getElementById('checkout').scrollIntoView({behavior:'smooth'});
+    }));
+
+    // Checkout submit
+    document.getElementById('checkoutForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const name = document.getElementById('c-name').value.trim();
+      const email = document.getElementById('c-email').value.trim();
+      const address = document.getElementById('c-address').value.trim();
+      const msgEl = document.getElementById('checkoutMsg');
+      if(!name||!email||!address){ msgEl.textContent='Merci de remplir tous les champs.'; return; }
+      const cart = loadCart(); if(cart.length===0){ msgEl.textContent='Votre panier est vide.'; return; }
+      const items = cart.map(it=>({ id: it.id, qty: it.qty }));
+      try{
+        const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ name, email, message: 'Commande: '+JSON.stringify(items)+' Adresse: '+address }) });
+        if(res.ok){ msgEl.textContent='Commande reçue ! Vous recevrez un e‑mail de confirmation (simulé).'; saveCart([]); renderCart(); updateCartCount(); this.reset(); }
+        else{ msgEl.textContent='Erreur lors de l’envoi'; }
+      }catch(e){ msgEl.textContent='Erreur réseau'; }
+    });
+
+    // init
+    renderCart(); updateCartCount();
+  </script>
+</body>
+</html>

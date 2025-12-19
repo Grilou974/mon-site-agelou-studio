@@ -1,0 +1,8 @@
+feat(demo): add retro pixel sprites and services
+
+- add mini-sprites for products (assets/sprite-g1.svg, sprite-g2.svg, sprite-g3.svg)
+- add service icons (assets/service-s1.svg, service-s2.svg, service-s3.svg)
+- integrate sprites into product grid and services cards
+- add tools/svg-to-png.js for generating PNG of animated SVG thumbnail (npm run svg2png)
+- style updates: menu, cart, services to match retro pixel neon theme
+- add product detail pages and modal preview

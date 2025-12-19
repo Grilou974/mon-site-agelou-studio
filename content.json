@@ -1,0 +1,21 @@
+{
+  "company": "Agelou Studio",
+  "heroTitle": "Agelou Studio — Sites Web Haut de Gamme",
+  "heroSubtitle": "Design élégant, performance optimisée et accompagnement complet.",
+  "services": [
+    {"title":"Site vitrine","desc":"Présentez votre activité avec un site élégant et responsive."},
+    {"title":"Site e‑commerce","desc":"Boutique en ligne performante, intégration paiement."},
+    {"title":"Maintenance & SEO","desc":"Suivi, sécurité et optimisation pour les moteurs de recherche."}
+  ],
+  "pricing": [
+    {"name":"Pack Essentiel","price":"€499","badge":"Offre","items":["Design personnalisé","Jusqu'à 5 pages","Formulaire de contact"]},
+    {"name":"Pack Pro","price":"€999","badge":"Meilleur rapport qualité/prix","items":["Design premium","Jusqu'à 12 pages","SEO de base + CMS"]},
+    {"name":"Pack Prestige","price":"Sur devis","items":["Solution sur mesure","Optimisation avancée","Accompagnement prioritaire"]}
+  ],
+  "portfolio": [
+    {"title":"Site Vitrine — Boutique Jeux Vidéo","image":"/assets/screenshots/site-1-thumb.svg","link":"realisations/site-1.html"},
+    {"title":"Site Vitrine — Boutique B","image":"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2d3a","link":"realisations/site-2.html"},
+    {"title":"Site Vitrine — Cabinet C","image":"https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a7a","link":"realisations/site-3.html"}
+  ],
+  "contactNote": "Expliquez votre projet et je vous recontacte sous 48h."
+}

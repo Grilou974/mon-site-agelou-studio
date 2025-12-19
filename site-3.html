@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cabinet Lemaire & Associés — Pack Prestige (démo)</title>
+  <meta name="description" content="Cabinet Lemaire & Associés — cabinet d'avocats spécialisé en droit des affaires et contentieux. Démo Pack Prestige." />
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/assets/cabinet-logo.svg" type="image/svg+xml">
+</head>
+<body class="demo-with-banner demo-cabinet demo-legal">
+  <div class="demo-banner">DÉMO — Cabinet Lemaire &amp; Associés</div>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <a href="/" style="display:flex;gap:.6rem;align-items:center;text-decoration:none;color:var(--text);font-weight:700"><img src="/assets/cabinet-logo.svg" alt="Cabinet Lemaire &amp; Associés" class="cabinet-logo">← Retour</a>
+      <nav style="display:flex;gap:1rem">
+        <a href="#home">Accueil</a>
+        <a href="#team">Équipe</a>
+        <a href="#services">Services</a>
+        <a href="#contacts">Contacts</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" style="padding:4rem 0;background:linear-gradient(180deg,rgba(0,0,0,0.06),transparent);">
+      <div class="container" style="display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div style="flex:1;min-width:320px">
+          <h1 style="margin:0;font-family:'Playfair Display',serif;font-size:2.2rem;">Cabinet Lemaire &amp; Associés</h1>
+          <p style="color:var(--muted);max-width:60%;margin-top:.6rem">Cabinet d'avocats spécialisé en droit des affaires, fusions & acquisitions, contentieux commercial et conseil stratégique pour dirigeants.</p>
+          <div style="margin-top:1rem"><a class="btn primary" href="#contact">Demander un RDV</a> <a class="btn outline" href="#services">Nos compétences</a></div>
+        </div>
+        <div style="flex:0 0 420px;min-width:240px">
+          <div class="card" style="padding:1.2rem;border-radius:10px">
+            <h3 style="margin:0 0 .4rem">Consultation initiale</h3>
+            <p style="margin:0;color:var(--muted)">Audit juridique & orientation — première heure offerte pour les nouveaux clients.</p>
+            <div style="margin-top:.8rem"><strong>Tarif Pack Prestige :</strong> Sur devis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="container section">
+      <h2>Équipe dirigeante</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
+        <div class="card"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Me. Jean Lemaire" style="width:100%;height:160px;object-fit:cover;border-radius:6px;margin-bottom:.6rem"><h3>Me. Jean Lemaire</h3><p>Associé fondateur — Droit des affaires</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" alt="Me. Claire Dubois" style="width:100%;height:160px;object-fit:cover;border-radius:6px;margin-bottom:.6rem"><h3>Me. Claire Dubois</h3><p>Associée — Contentieux & arbitrage</p></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1200&auto=format&fit=crop" alt="Me. Antoine Moreau" style="width:100%;height:160px;object-fit:cover;border-radius:6px;margin-bottom:.6rem"><h3>Me. Antoine Moreau</h3><p>Counsel — Fusions & Acquisitions</p></div>
+      </div>
+    </section>
+
+    <section id="services" class="container section">
+      <h2>Domaines d'intervention</h2>
+      <div class="grid" id="servicesGrid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem"></div>
+    </section>
+
+    <section id="contacts" class="container section">
+      <h2>Contacts par service</h2>
+      <div class="contacts-grid" id="contactsGrid"></div>
+      <p style="color:var(--muted);margin-top:1rem">Vous pouvez aussi utiliser le formulaire de contact pour demander un rendez‑vous en précisant le service.</p>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Demander un RDV</h2>
+      <p style="color:var(--muted);max-width:70%">Remplissez le formulaire ci‑dessous pour demander une consultation ; indiquez le service souhaité ou utilisez les fiches de contact par service.</p>
+      <form id="demoForm3" class="contact-form" action="#" novalidate>
+        <input type="hidden" id="d3-service" name="service" value="">
+        <div class="form-row">
+          <input type="text" id="d3-name" name="name" placeholder="Nom et prénom" required>
+          <input type="email" id="d3-email" name="email" placeholder="Email" required>
+        </div>
+        <input type="tel" id="d3-phone" name="phone" placeholder="Téléphone" required>
+        <textarea id="d3-message" name="message" rows="5" placeholder="Objet de la demande" required></textarea>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Demander un RDV</button>
+        </div>
+        <div id="d3-msg" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+      <div style="margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap">
+        <div class="card" style="min-width:220px"><strong>Téléphone :</strong><br>+33 1 55 44 33 22</div>
+        <div class="card" style="min-width:220px"><strong>Adresse :</strong><br>45 Rue de la Paix, 75002 Paris</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Cabinet Lemaire &amp; Associés — Démo Pack Prestige</div>
+      <div style="color:var(--muted)">Mentions légales — Données fictives</div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for header links
+    document.querySelectorAll('header nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); target.focus({preventScroll:true}); }
+      });
+    });
+
+    // Define legal services with contact details and render them
+    const legalServices = [
+      { id:'srv1', title:'Droit des affaires', desc:'Contrats, gouvernance, conformité', email:'affaires@lemaire.demo', phone:'+33 1 55 44 11 01' },
+      { id:'srv2', title:'Fusions & Acquisitions', desc:'Due diligence, négociation, closing', email:'m&a@lemaire.demo', phone:'+33 1 55 44 11 02' },
+      { id:'srv3', title:'Contentieux & Arbitrage', desc:'Procédures, arbitrage commercial', email:'contentieux@lemaire.demo', phone:'+33 1 55 44 11 03' },
+      { id:'srv4', title:'Droit Social', desc:'Contrats de travail, ruptures, conseil RH', email:'social@lemaire.demo', phone:'+33 1 55 44 11 04' },
+      { id:'srv5', title:'Droit Immobilier', desc:'Transactions, baux, litiges fonciers', email:'immobilier@lemaire.demo', phone:'+33 1 55 44 11 05' }
+    ];
+
+    const sgrid = document.getElementById('servicesGrid');
+    const cgrid = document.getElementById('contactsGrid');
+    legalServices.forEach(s=>{
+      const el = document.createElement('div'); el.className='service-card card';
+      el.innerHTML = `<h3>${s.title}</h3><p class="service-note">${s.desc}</p><div style="margin-top:.6rem;display:flex;gap:.6rem"><button class="btn outline contact-service" data-id="${s.id}">Contact</button><a class="btn primary" href="mailto:${s.email}">Email</a></div>`;
+      sgrid.appendChild(el);
+
+      const c = document.createElement('div'); c.className='contacts-card';
+      c.innerHTML = `<strong>${s.title}</strong><p style="margin:.4rem 0;color:var(--muted)">${s.desc}</p><div><strong>Téléphone :</strong> ${s.phone}<br><strong>Email :</strong> <a href="mailto:${s.email}">${s.email}</a></div>`;
+      cgrid.appendChild(c);
+    });
+
+    // clicking 'Contact' on a service fills the hidden field and scrolls to contact form
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('.contact-service');
+      if(!btn) return;
+      const sid = btn.dataset.id; const service = legalServices.find(x=>x.id===sid);
+      if(!service) return;
+      const serviceField = document.getElementById('d3-service');
+      if(serviceField) serviceField.value = service.title;
+      const contactSection = document.getElementById('contact');
+      if(contactSection){ contactSection.scrollIntoView({behavior:'smooth', block:'start'}); contactSection.focus({preventScroll:true}); }
+    });
+
+    document.getElementById('demoForm3').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const name = document.getElementById('d3-name').value.trim();
+      const email = document.getElementById('d3-email').value.trim();
+      const phone = document.getElementById('d3-phone').value.trim();
+      const message = document.getElementById('d3-message').value.trim();
+      const msgEl = document.getElementById('d3-msg');
+      if(!name||!email||!phone||!message){ msgEl.textContent='Merci de remplir tous les champs.'; return; }
+      try{
+        const res = await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ name, email, phone, message }) });
+        if(res.ok){ msgEl.textContent='Merci — votre demande a été envoyée. Nous vous contacterons sous 48h.'; this.reset(); } else { msgEl.textContent='Erreur lors de l’envoi.'; }
+      }catch(e){ msgEl.textContent='Erreur réseau'; }
+    });
+  </script>
+</body>
+</html>

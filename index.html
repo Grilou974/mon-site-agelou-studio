@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agelou Studio — Sites Web Haut de Gamme</title>
+  <meta name="description" content="Création de sites web professionnels et luxueux — forfaits, portfolio et demande de devis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon.svg" sizes="64x64" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/agelou-logo.svg">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <div class="brand">
+        <a href="/" class="brand-link">
+          <img src="assets/agelou-logo.svg" alt="Agelou Studio" class="brand-logo">
+        </a>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" alt="Bureau moderne"/>
+        </div>
+        <h1 id="heroTitle">Sites Web Haut de Gamme pour entreprises exigeantes</h1>
+        <p id="heroSubtitle">Design élégant, performance optimisée et accompagnement complet pour votre présence en ligne.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#tarifs">Voir les offres</a>
+          <a class="btn outline" href="#contact">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container section">
+      <h2>Ce que je fais</h2>
+      <div class="grid services-grid">
+        <article class="card">
+          <h3>Site vitrine</h3>
+          <p>Présentez votre activité avec un site élégant, responsive et facile à mettre à jour.</p>
+        </article>
+        <article class="card">
+          <h3>Site e‑commerce</h3>
+          <p>Boutique en ligne performante, intégration paiement, optimisation conversion.</p>
+        </article>
+        <article class="card">
+          <h3>Maintenance &amp; SEO</h3>
+          <p>Suivi, sécurité, sauvegardes et optimisation pour les moteurs de recherche.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tarifs" class="container section">
+      <h2>Tarifs</h2>
+      <div class="grid pricing-grid">
+        <div class="price-card">
+          <span class="badge">Offre</span>
+          <h3>Pack Essentiel</h3>
+          <div class="price">€499</div>
+          <ul>
+            <li>Design personnalisé</li>
+            <li>Pages : jusqu'à 5</li>
+            <li>Formulaire de contact</li>
+          </ul>
+          <div style="display:flex;gap:.6rem;justify-content:center;margin-top:1rem"><a class="btn primary" href="#contact">Commander</a><a class="btn outline" href="realisations/site-1.html" target="_blank" rel="noopener noreferrer">Voir la démo</a></div>
+        </div>
+        <div class="price-card featured">
+          <span class="badge featured">Meilleur rapport qualité/prix</span>
+          <h3>Pack Pro</h3>
+          <div class="price">€999</div>
+          <ul>
+            <li>Design premium</li>
+            <li>Pages : jusqu'à 12</li>
+            <li>SEO de base + CMS</li>
+          </ul>
+          <div style="display:flex;gap:.6rem;justify-content:center;margin-top:1rem"><a class="btn primary" href="#contact">Commander</a><a class="btn outline" href="realisations/site-2.html" target="_blank" rel="noopener noreferrer">Voir la démo</a></div>
+        </div>
+        <div class="price-card">
+          <h3>Pack Prestige</h3>
+          <div class="price">Sur devis</div>
+          <ul>
+            <li>Solution sur mesure</li>
+            <li>Optimisation avancée</li>
+            <li>Accompagnement prioritaire</li>
+          </ul>
+          <div style="display:flex;gap:.6rem;justify-content:center;margin-top:1rem"><a class="btn primary" href="#contact">Demander un devis</a><a class="btn outline" href="realisations/site-3.html" target="_blank" rel="noopener noreferrer">Voir la démo</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container section">
+      <h2>Réalisations</h2>
+      <div class="grid portfolio-grid" id="portfolioGrid">
+        <!-- Fallback statique (visible même sans serveur) -->
+        <div class="thumb"><a href="realisations/site-1.html" target="_blank" rel="noopener noreferrer"><img src="/assets/screenshots/site-1-thumb.svg" alt="Site Vitrine — Boutique Jeux Vidéo"><div class="overlay"><div class="overlay-title">Site Vitrine — Boutique Jeux Vidéo</div><div class="overlay-cta">Voir le site</div></div></a></div>
+        <div class="thumb" style="position:relative;overflow:hidden"><a href="realisations/site-2.html" target="_blank" rel="noopener noreferrer"><img src="/assets/screenshots/site-2.svg" alt="Site Vitrine — Agence de Voyage"><div class="overlay"><div class="overlay-title">Évasion Voyages</div><div class="overlay-cta">Voir le site</div></div></a><div class="thumb-bird"><svg width="30" height="20" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="birdGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4a7c65;stop-opacity:1"/><stop offset="100%" style="stop-color:#2c5f2d;stop-opacity:1"/></linearGradient></defs><ellipse cx="35" cy="20" rx="15" ry="8" fill="url(#birdGrad2)"/><circle cx="50" cy="18" r="6" fill="url(#birdGrad2)"/><path d="M 56,18 L 60,18 L 58,20 Z" fill="#ff8c00"/><circle cx="52" cy="17" r="1.5" fill="#ffffff"/><circle cx="52.5" cy="17" r="0.8" fill="#000000"/><path d="M 35,20 Q 20,10 10,15 Q 15,22 35,24 Z" fill="rgba(74,124,101,0.8)"><animateTransform attributeName="transform" type="rotate" values="0,35,20; -25,35,20; 0,35,20" dur="0.3s" repeatCount="indefinite"/></path><path d="M 35,20 Q 50,10 60,15 Q 55,22 35,24 Z" fill="rgba(74,124,101,0.7)"><animateTransform attributeName="transform" type="rotate" values="0,35,20; 25,35,20; 0,35,20" dur="0.3s" repeatCount="indefinite"/></path><path d="M 20,20 Q 15,18 12,20 Q 15,22 20,22 Z" fill="rgba(44,95,45,0.8)"/></svg></div></div>
+        <div class="thumb"><a href="realisations/site-3.html" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a7a" alt="Site Vitrine — Cabinet C"><div class="overlay"><div class="overlay-title">Site Vitrine — Cabinet C</div><div class="overlay-cta">Voir le site</div></div></a></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact-section">
+      <h2>Contact &amp; Devis</h2>
+      <p>Expliquez votre projet et je vous recontacte sous 48h.</p>
+      <form id="contactForm" class="contact-form" action="#" novalidate>
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Nom" required>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <textarea id="message" name="message" rows="6" placeholder="Votre projet / équipes / budget" required></textarea>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Envoyer</button>
+        </div>
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Agelou Studio. Tous droits réservés.</div>
+      <div class="socials">LinkedIn · Email</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

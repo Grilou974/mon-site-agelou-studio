@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#e9e6e2"/>
+  <rect x="40" y="40" width="560" height="240" fill="#bdb6ab"/>
+  <text x="50%" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#333">Me. Antoine Moreau</text>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="84" viewBox="0 0 300 84" role="img" aria-labelledby="title">
+  <title id="title">Agelou Studio</title>
+  <rect width="300" height="84" rx="12" fill="transparent"/>
+  <circle cx="28" cy="42" r="14" fill="#000" />
+  <text x="56" y="44" font-family="Playfair Display, serif" font-size="28" font-weight="700" fill="#000">Agelou Studio</text>
+  <text x="56" y="64" font-family="Inter, sans-serif" font-size="12" fill="#333">Création de sites web</text>
+</svg>
